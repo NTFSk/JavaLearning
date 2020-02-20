@@ -1,2 +1,1 @@
-# JAVA-
--JAVA学习记录
+![](https://github.com/NTFSk/JavaLearning/blob/master/pictures/wallhaven-13mk9v.jpg)
