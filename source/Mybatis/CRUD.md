@@ -1,0 +1,28 @@
+##基础的CRUD主要就是在对象的xml文件中写入不同的sql语句
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+    <mapper namespace="com.how2java.pojo">
+        <insert id="addCategory" parameterType="Category" >
+            insert into category_ ( name ) values (#{name})   
+        </insert>
+         
+        <delete id="deleteCategory" parameterType="Category" >
+            delete from category_ where id= #{id}  
+        </delete>
+         
+        <select id="getCategory" parameterType="_int" resultType="Category">
+            select * from   category_  where id= #{id}   
+        </select>
+ 
+        <update id="updateCategory" parameterType="Category" >
+            update category_ set name=#{name} where id=#{id}   
+        </update>
+        <select id="listCategory" resultType="Category">
+            select * from   category_     
+        </select>    
+    </mapper>
+```
