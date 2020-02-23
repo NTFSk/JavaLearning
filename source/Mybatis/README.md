@@ -5,3 +5,5 @@ Mybatis
 * [CRUD](https://github.com/NTFSk/JavaLearning/blob/master/source/Mybatis/2.CRUD.md)
 
 * [一对多](https://github.com/NTFSk/JavaLearning/blob/master/source/Mybatis/3.mybatis%E4%B8%AD%E7%9A%84%E4%B8%80%E5%AF%B9%E5%A4%9A.md)
+
+* [多对一](https://github.com/NTFSk/JavaLearning/blob/master/source/Mybatis/4.mybatis%E4%B8%AD%E7%9A%84%E5%A4%9A%E5%AF%B9%E4%B8%80.md) 
