@@ -5,7 +5,7 @@
 [2.配置pojo类](#2)<br>
 
 
-<h3 id="1">1.核心配置文件applicationContext.xml</h3><br>
+<h3 id="1">1. 核心配置文件applicationContext.xml</h3><br>
 
 ### 在文件中加入一行"<context:annotation-config/>"
 
@@ -35,7 +35,7 @@
 </beans>
 ```
 
-<h3 id="2">2.配置pojo类</h3><br>
+<h3 id="2">2. 配置pojo类</h3><br>
 
 ### 方法1： 在Product.java的category属性前加上@Autowired注解
 
