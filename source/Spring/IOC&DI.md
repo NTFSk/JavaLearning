@@ -3,8 +3,8 @@ ___IOC，反转控制，简单说以前由new方法来产生一个新的对象�
 ___DI,依赖注入,就是拿到对象属性的时候，属性已经有了相关的值，直接使用就可以___
 
 
-[第一步，创建项目]<br>
-[第二步，导入jar包]<br>
+第一步，创建项目<br>
+第二步，导入jar包<br>
 [第三步，创建一个实体类Category](#3)<br>
 [第四步，核心配置文件applicationContext.xml](#4)<br>
 [第五步，测试类](#5)<br>
@@ -62,7 +62,7 @@ applicationContext.xml是Spring的核心配置文件***
 </beans>
 ```
 
-***通过关键字c即可获取Category对象，该对象获取的时候，就带有值为"category 1"的name属性***
+***通过关键字 c 即可获取Category对象，该对象获取的时候，就带有值为"category 1"的name属性***
 
 
 <h3 id="5">第五步，测试类</h3><br>
