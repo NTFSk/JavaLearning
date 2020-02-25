@@ -71,7 +71,7 @@ public void setCategory(Category category) {
 
 <h3 id="3">applicationContext.xml</h3><br>
 
-在applicationContext.xml中新增***<context:component-scan base-package="com.how2java.pojo"/>***
+在applicationContext.xml中新增`<context:component-scan base-package="com.how2java.pojo"/>`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -96,7 +96,7 @@ public void setCategory(Category category) {
 
 <h3 id="4">pojo类</h3><br>
 
-####1.在类之前加上@Component注解，表明此类是bean
+#### 1.在类之前加上@Component注解，表明此类是bean
 ```java
 @Component("p")
 public class Product {
@@ -107,7 +107,7 @@ public class Product {
 public class Category {
 ```
 
-####2.因为配置从applicationContext.xml中移除了，所以在类中进行属性初始化
+#### 2.因为配置从applicationContext.xml中移除了，所以在类中进行属性初始化
 ```java
 private int id;
 private String name="product 1";
