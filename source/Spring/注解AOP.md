@@ -1,10 +1,10 @@
 注解方式AOP
 ---
 
-[1.注解业务类](#1)
-[2.注解切面类](#2)
-[3.核心配置applicationContext.xml](#3)
-[4.运行结果](#4)
+[1.注解业务类](#1)<br>
+[2.注解切面类](#2)<br>
+[3.核心配置applicationContext.xml](#3)<br>
+[4.运行结果](#4)<br>
 
 <h3 id="1">1.注解业务类</h3><br>
 
@@ -28,7 +28,7 @@ public class ProductService {
 `@Aspect注解表示这是一个切面`<br>
 `@Component表示这是一个bean，由Spring进行管理`<br>
 
-***在类中的方法前加上@Around(value = "execution(* com.how2java.service.ProductService.*(..))") ***<br>
+***在类中的方法前加上@Around(value = "execution(* com.how2java.service.ProductService.*(..))")***<br>
 `表示对com.how2java.service.ProductService 这个类中的所有方法进行切面操作`<br>
 
 
