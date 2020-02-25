@@ -113,7 +113,7 @@ public class LoggerAspect {
 </beans>
 ```
 `execution(* com.how2java.service.ProductService.*(..)) `<br>
-表示对满足如下条件的方法调用，进行切面操作:<br>
+***表示对满足如下条件的方法调用，进行切面操作:<br>***
 `* 返回任意类型`<br>
 `com.how2java.service.ProductService.* 包名以 com.how2java.service.ProductService 开头的类的任意方法`<br>
 `(..) 参数是任意数量和类型`<br>
