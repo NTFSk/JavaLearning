@@ -28,7 +28,7 @@ public class ProductService {
 `@Aspect注解表示这是一个切面`<br>
 `@Component表示这是一个bean，由Spring进行管理`<br>
 
-***在类中的方法前加上@Around(value = "execution(* com.how2java.service.ProductService.*(..))")***<br>
+___在类中的方法前加上@Around(value = "execution(* com.how2java.service.ProductService.*(..))")___<br>
 `表示对com.how2java.service.ProductService 这个类中的所有方法进行切面操作`<br>
 
 
