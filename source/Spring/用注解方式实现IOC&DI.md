@@ -7,7 +7,7 @@
 
 <h3 id="1">1. 核心配置文件applicationContext.xml</h3><br>
 
-### 在文件中加入一行"<context:annotation-config/>"
+#### 在文件中加入一行"<context:annotation-config/>"
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,14 +37,14 @@
 
 <h3 id="2">2. 配置pojo类</h3><br>
 
-### 方法1： 在Product.java的category属性前加上@Autowired注解
+#### 方法1： 在Product.java的category属性前加上@Autowired注解
 
 ```java
 
     private Category category;
 ```
 
-### 方法1.2：在setCategory方法前加上@Autowired
+#### 方法1.2：在setCategory方法前加上@Autowired
 
 ```java
 @Autowired
@@ -53,7 +53,7 @@ public void setCategory(Category category) {
     }
 ```
 
-### 方法2：@Resource
+#### 方法2：@Resource
 
 ***这里的name="c"就关联了核心配置中name="c"的bean***
 ```java
@@ -96,7 +96,7 @@ public void setCategory(Category category) {
 
 <h3 id="4">pojo类</h3><br>
 
-1.在类之前加上@Component注解，表明此类是bean
+####1.在类之前加上@Component注解，表明此类是bean
 ```java
 @Component("p")
 public class Product {
@@ -107,7 +107,7 @@ public class Product {
 public class Category {
 ```
 
-2.因为配置从applicationContext.xml中移除了，所以在类中进行属性初始化
+####2.因为配置从applicationContext.xml中移除了，所以在类中进行属性初始化
 ```java
 private int id;
 private String name="product 1";
