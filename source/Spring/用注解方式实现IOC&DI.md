@@ -1,5 +1,6 @@
 
-## 对行为的注解
+对行为的注解
+---
 [1.核心配置文件applicationContext.xml](#1)<br>
 
 [2.配置pojo类](#2)<br>
@@ -62,14 +63,15 @@ public void setCategory(Category category) {
 ```
 
 
-## 对Bean的注解
+对Bean的注解
+---
 [1.核心配置文件applicationContext.xml](#3)<br>
 
 [2.配置pojo类](#4)<br>
 
 [3.测试结果](#5)<br>
 
-<h3 id="3">applicationContext.xml</h3><br>
+<h3 id="3">1. applicationContext.xml</h3><br>
 
 在applicationContext.xml中新增`<context:component-scan base-package="com.how2java.pojo"/>`
 
@@ -94,9 +96,9 @@ public void setCategory(Category category) {
 ```
 
 
-<h3 id="4">pojo类</h3><br>
+<h3 id="4">2. pojo类</h3><br>
 
-#### 1.在类之前加上@Component注解，表明此类是bean
+#### 1)在类之前加上@Component注解，表明此类是bean
 ```java
 @Component("p")
 public class Product {
@@ -107,7 +109,7 @@ public class Product {
 public class Category {
 ```
 
-#### 2.因为配置从applicationContext.xml中移除了，所以在类中进行属性初始化
+#### 2)因为配置从applicationContext.xml中移除了，所以在类中进行属性初始化
 ```java
 private int id;
 private String name="product 1";
