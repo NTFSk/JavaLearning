@@ -21,4 +21,5 @@
 * __SpringMVC__
 	-[1.Hello Spring MVC](./SpringMVC/Hello-SpringMVC.md)
 	-[2.视图定位](./SpringMVC/视图定位.md)
-	-[3.注解方式](./SpringMVC/注解方式.md )
+	-[3.注解方式完成Hello Spring MVC](./SpringMVC/注解方式.md )
+	-[4.接收表单数据](./SpringMVC/接收数据.md)
