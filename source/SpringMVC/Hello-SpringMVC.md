@@ -23,7 +23,7 @@
 ![](https://stepimagewm.how2j.cn/1890.png)
 <h3 id="3">3.配置入口Spring MVC的入口DispatcherServlet(web.xml)</h3><br>
 
-___在WEB-INF目录下创建web.xml
+___在WEB-INF目录下创建web.xml<br>
 	配置Spring MVC的入口, DispatcherServlet，把所有的请求都提交到该Servlet___
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
