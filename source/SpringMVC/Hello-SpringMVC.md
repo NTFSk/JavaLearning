@@ -7,12 +7,12 @@
 
 
 
-[1.创建dynamic web project项目](#1)
-[2.导入jar包](#2)
-[3.配置入口Spring MVC的入口DispatcherServlet(web.xml)](#3)
-[4.映射配置文件(springmvc-servlet.xml)](#4)
-[5.控制类(IndexController)](#5)
-[6.视图(index.jsp)](#6)
+[1.创建dynamic web project项目](#1)<br>
+[2.导入jar包](#2)<br>
+[3.配置入口Spring MVC的入口DispatcherServlet(web.xml)](#3)<br>
+[4.映射配置文件(springmvc-servlet.xml)](#4)<br>
+[5.控制类(IndexController)](#5)<br>
+[6.视图(index.jsp)](#6)<br>
 
 
 <h3 id="1"></h3>1..创建dynamic web project项目<br>
