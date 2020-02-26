@@ -15,7 +15,7 @@
 [6.视图(index.jsp)](#6)<br>
 
 
-<h3 id="1"></h3>1..创建dynamic web project项目<br>
+<h3 id="1">1.创建dynamic web project项目</h3><br>
 
 ![](https://stepimagewm.how2j.cn/1889.png)
 <h3 id="2">2.导入jar包</h3><br>
