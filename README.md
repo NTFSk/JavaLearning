@@ -11,15 +11,15 @@
 	- [多对一](https://github.com/NTFSk/JavaLearning/blob/master/source/Mybatis/4.mybatis%E4%B8%AD%E7%9A%84%E5%A4%9A%E5%AF%B9%E4%B8%80.md) 
 
 * __Spring__
-	- [IOC/DI](./Spring/IOC&DI.md)
-	- [注入对象](./Spring/注入对象.md)
-	- [用注解方式实现IOC&DI](./Spring/用注解方式实现IOC&DI.md)
-	- [AOP](./Spring/AOP.md)
-	- [注解方式AOP](./Spring/注解AOP.md)
+	- [IOC/DI](./source/Spring/IOC&DI.md)
+	- [注入对象](./source/Spring/注入对象.md)
+	- [用注解方式实现IOC&DI](./source/Spring/用注解方式实现IOC&DI.md)
+	- [AOP](./source/Spring/AOP.md)
+	- [注解方式AOP](./source/Spring/注解AOP.md)
 
 
 * __SpringMVC__
-	- [Hello Spring MVC](./SpringMVC/Hello-SpringMVC.md)
-	- [视图定位](./SpringMVC/视图定位.md)
-	- [注解方式完成Hello Spring MVC](./SpringMVC/注解方式.md )
-	- [接收表单数据](./SpringMVC/接收数据.md)
+	- [Hello Spring MVC](./source/SpringMVC/Hello-SpringMVC.md)
+	- [视图定位](./source/SpringMVC/视图定位.md)
+	- [注解方式完成Hello Spring MVC](./source/SpringMVC/注解方式.md )
+	- [接收表单数据](./source/SpringMVC/接收数据.md)
