@@ -50,6 +50,7 @@ __对比xml方式__
 ```
 __发现注解方式的CRUD就是把 xml 中的 sql 语句注解到接口中声明的方法上__
 
+---
 <h2 id="2">2.核心配置(mybatis-config.xml)</h2><br>
 
 __在核心配置中添加该接口的映射__
@@ -84,6 +85,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 </configuration>
 ```
 
+---
 <h2 id="3">3.编写测试类进行测试</h2><br>
 
 ```java
@@ -97,7 +99,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     CategoryMapper mapper = session.getMapper(CategoryMapper.class);
 ```
 
-__再利用接口对象实现操作__
+    __再利用接口对象实现操作__
 
 ```java
     // 增加一条数据
@@ -112,3 +114,4 @@ __再利用接口对象实现操作__
         }
 ```
 
+---
