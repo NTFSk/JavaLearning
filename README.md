@@ -12,11 +12,11 @@
 	- [多对一](https://github.com/NTFSk/JavaLearning/blob/master/source/Mybatis/4.mybatis%E4%B8%AD%E7%9A%84%E5%A4%9A%E5%AF%B9%E4%B8%80.md)
 	- [动态SQL](https://github.com/NTFSk/JavaLearning/blob/master/source/Mybatis/5.%E5%8A%A8%E6%80%81SQL.md)
 	- [注解](#)
-		-[增删改查](./source/Mybatis/注解-CRUD.md)
-		-[一对多](./source/Mybatis/注解-一对多.md)
-		-[多对一](./source/Mybatis/注解-多对一.md)
-		-[多对多](./source/Mybatis/注解-多对多.md)
-		-[动态SQL](./source/Mybatis/注解-动态SQL.md)
+		- [增删改查](./source/Mybatis/注解-CRUD.md)
+		- [一对多](./source/Mybatis/注解-一对多.md)
+		- [多对一](./source/Mybatis/注解-多对一.md)
+		- [多对多](./source/Mybatis/注解-多对多.md)
+		- [动态SQL](./source/Mybatis/注解-动态SQL.md)
 
 * __Spring__
 	- [IOC/DI](./source/Spring/IOC&DI.md)
