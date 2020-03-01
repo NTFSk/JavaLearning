@@ -99,7 +99,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     CategoryMapper mapper = session.getMapper(CategoryMapper.class);
 ```
 
-    __再利用接口对象实现操作__
+   __再利用接口对象实现操作__
 
 ```java
     // 增加一条数据
