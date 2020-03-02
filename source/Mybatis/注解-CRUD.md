@@ -6,6 +6,9 @@
 
 <h2 id="1">1.Mapper接口</h2><br>
 
+___MyBatis 3 推荐使用 Mapper接口的方式来执行 xml 配置中的 SQL，用起来很方便，也很灵活___<br>
+
+
 ```java
 package com.how2java.mapper;
   
@@ -88,6 +91,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 ---
 <h2 id="3">3.编写测试类进行测试</h2><br>
 
+___通常是通过 xml 配置文件来创建SqlSessionFactory对象，然后再获取SqlSession对象，接着获取自定义的 Mapper 接口的代理对象，最后调用接口方法___
 ```java
     // 读取核心配置文件
     String resource = "mybatis-config.xml";
