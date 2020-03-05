@@ -145,14 +145,20 @@ public class CodeGerator {
 _配置spring需要数据源,所以准备一个数据源的配置文件_  
 `数据源`配置文件: `src/main/resources/db.properties`  
 项目启动时, 框架初始化, 需要在 `web.xml` 中添加启动配置  
-___在项目中创建对应的配置文件之后,给项目添加`web`支持:___  
-(1)右键项目,然后点击`Open Module Settings`  
+___在项目中创建对应的配置文件之后,给项目添加`web`支持:___  <br>
+
+__(1)右键项目,然后点击`Open Module Settings`__  
 ![](./DemoPictures/5.PNG)  
-(2)添加web配置  
+<br>
+__(2)添加web配置__  
 ![](./DemoPictures/6.PNG)  
-(3)点击`edit`按钮可以编辑版本(好像首次可以编辑版本)  
+<br>
+__(3)点击`edit`按钮可以编辑版本(好像首次可以编辑版本)__  
 ![](./DemoPictures/7.PNG)  
-(4)点击`Create Artifact`按钮  
+<br>
+__(4)点击`Create Artifact`按钮__  
 ![](./DemoPictures/8.PNG)  
-(5)点击`ok`完成创建  
+<br>
+__(5)点击`ok`完成创建__  
+<br>
 
