@@ -186,3 +186,60 @@ _数据库连接部分_  :arrow_down:
 
 * `c3p0`
 * `mysql-connector-java`
+
+[点击查看依赖配置文件](#)
+
+###  (3)细化配置文件
+
+针对配置文件中的配置信息进行处理,具体参考官方文档
+
+## 4. 单元测试
+
+### (1)引入依赖
+
+基于`spring`的单元测试, 需要引入以下依赖
+
+* `spring-test`
+* `junit`
+* `spring-aop`
+* `aspectj`
+
+```xml
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.2.1.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>5.2.1.RELEASE</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.5</version>
+        </dependency>
+
+```
+
+
+
+### (2)单元测试代码
+
+
+
