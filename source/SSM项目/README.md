@@ -138,27 +138,52 @@ public class CodeGerator {
 ```
 
 ## 3. SSSM项目整合
+### (1)配置文件整合
 `spring`配置文件: `src/main/resources/applicationContext.xml`  
 `springMVC`配置文件: `src/main/resources/springMVC.xml`  
 `mybatis`配置文件: `src/main/resources/mybatis-config.xml`  
 
 _配置spring需要数据源,所以准备一个数据源的配置文件_  
 `数据源`配置文件: `src/main/resources/db.properties`  
+![](./DemoPictures/9.PNG)
+<br>
 项目启动时, 框架初始化, 需要在 `web.xml` 中添加启动配置  
 ___在项目中创建对应的配置文件之后,给项目添加`web`支持:___  <br>
 
-__(1)右键项目,然后点击`Open Module Settings`__  
+__(1)右键项目,然后点击`Open Module Settings`__  <br>
 ![](./DemoPictures/5.PNG)  
 <br>
-__(2)添加web配置__  
+__(2)添加web配置__  <br>
 ![](./DemoPictures/6.PNG)  
 <br>
-__(3)点击`edit`按钮可以编辑版本(好像首次可以编辑版本)__  
+__(3)点击`edit`按钮可以编辑版本(好像只有首次可以编辑版本)__  <br>
 ![](./DemoPictures/7.PNG)  
 <br>
-__(4)点击`Create Artifact`按钮__  
+__(4)点击`Create Artifact`按钮__  <br>
 ![](./DemoPictures/8.PNG)  
 <br>
-__(5)点击`ok`完成创建__  
+__(5)点击`ok`完成创建__  <br>
 <br>
 
+### (2)依赖添加
+_spring部分_  :arrow_down:
+* `spring-core`
+* `spring-context`
+* `spring-beans`
+* `spring-expression`
+* `spring-insuiession`
+* `spring-jdbc`
+* `spring-orm`
+* `spring-web`
+* `spring-webmvc`
+
+_mybatis部分_  :arrow_down:
+<br>
+* `mybatis`
+* `mybatis-spring`
+
+_数据库连接部分_  :arrow_down:
+<br>
+* `c3p0`
+* `mysql-connector-java`
+<br>
