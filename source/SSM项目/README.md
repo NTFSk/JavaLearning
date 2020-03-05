@@ -104,7 +104,7 @@ ___`生成规则` 就是一个配置文件___
 
 ### (3) 实现逆向工程
 
-通过配置文件指定的生成规则, 自动构建实体类和数据访问类,详情参考官方文档
+通过配置文件指定的生成规则, 自动构建实体类和数据访问类,详情参考[官方文档](http://mybatis.org/generator/running/runningWithJava.html)
 
 ![](./DemoPictures/4.PNG)
 ```java
@@ -136,3 +136,22 @@ public class CodeGerator {
     }
 }
 ```
+
+## 3. SSSM项目整合
+`spring`配置文件: `src/main/resources/applicationContext.xml`  
+`springMVC`配置文件: `src/main/resources/springMVC.xml`  
+`mybatis`配置文件: `src/main/resources/mybatis-config.xml`  
+
+_配置spring需要数据源,所以准备一个数据源的配置文件_  
+`数据源`配置文件: `src/main/resources/db.properties`  
+项目启动时, 框架初始化, 需要在 `web.xml` 中添加启动配置  
+___在项目中创建对应的配置文件之后,给项目添加`web`支持:___  
+(1)右键项目,然后点击`Open Module Settings`
+![](./DemoPictures/5.PNG)
+(2)添加web配置
+![](./DemoPictures/6.PNG)
+(3)点击`edit`按钮可以编辑版本(好像首次可以编辑版本)
+![](./DemoPictures/7.PNG)
+(4)点击`Create Artifact`按钮
+![](./DemoPictures/8.PNG)
+(5)点击`ok`完成创建
