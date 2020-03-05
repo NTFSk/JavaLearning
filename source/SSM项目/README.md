@@ -177,13 +177,12 @@ _spring部分_  :arrow_down:
 * `spring-web`
 * `spring-webmvc`
 
-_mybatis部分_  :arrow_down:
-<br>
+_mybatis部分_  :arrow_down:  
+
 * `mybatis`
 * `mybatis-spring`
 
-_数据库连接部分_  :arrow_down:
-<br>
+_数据库连接部分_  :arrow_down:  
+
 * `c3p0`
 * `mysql-connector-java`
-<br>
