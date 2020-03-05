@@ -146,12 +146,13 @@ _配置spring需要数据源,所以准备一个数据源的配置文件_
 `数据源`配置文件: `src/main/resources/db.properties`  
 项目启动时, 框架初始化, 需要在 `web.xml` 中添加启动配置  
 ___在项目中创建对应的配置文件之后,给项目添加`web`支持:___  
-(1)右键项目,然后点击`Open Module Settings`
-![](./DemoPictures/5.PNG)
-(2)添加web配置
-![](./DemoPictures/6.PNG)
-(3)点击`edit`按钮可以编辑版本(好像首次可以编辑版本)
-![](./DemoPictures/7.PNG)
-(4)点击`Create Artifact`按钮
-![](./DemoPictures/8.PNG)
-(5)点击`ok`完成创建
+(1)右键项目,然后点击`Open Module Settings`  
+![](./DemoPictures/5.PNG)  
+(2)添加web配置  
+![](./DemoPictures/6.PNG)  
+(3)点击`edit`按钮可以编辑版本(好像首次可以编辑版本)  
+![](./DemoPictures/7.PNG)  
+(4)点击`Create Artifact`按钮  
+![](./DemoPictures/8.PNG)  
+(5)点击`ok`完成创建  
+
