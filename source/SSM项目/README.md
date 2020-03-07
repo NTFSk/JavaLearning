@@ -241,5 +241,71 @@ _数据库连接部分_  :arrow_down:
 
 ### (2)单元测试代码
 
+```java
+package com.fsh.test;
 
+import com.fsh.xiaomi.dao.ConsumerMapper;
+import com.fsh.xiaomi.entry.Consumer;
+import com.fsh.xiaomi.entry.ConsumerExample;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.List;
+
+// 单元测试
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:applicationContext.xml"})
+public class DaoTest {
+    @Autowired
+    private ConsumerMapper consumerMapper;
+
+    @Test
+    public void testConsumerInsert(){
+        // 创建一个consumer对象
+        Consumer consumer = new Consumer("fsh","123");
+
+        // 将consumer对象添加到数据库中
+        consumerMapper.insertSelective(consumer);
+        System.out.println("数据insert执行完成");
+    }
+
+    @Test
+    public void testConsumerSelectById(){
+        Consumer consumer = consumerMapper.selectByPrimaryKey(1);
+        System.out.println(consumer);
+    }
+
+    @Test
+    public void testConsumerSelectByExample() {
+        // 创建一个查询条件[账号+ 密码]
+        ConsumerExample ce = new ConsumerExample();
+        ce.createCriteria().andUsernameEqualTo("fsh")
+                .andPasswordEqualTo("123");
+
+        // 查询数据
+        List<Consumer> consumers = consumerMapper.selectByExample(ce);
+        consumers.forEach(consumer -> System.out.println(consumer));
+    }
+}
+
+```
+
+## 5. 业务模型开发&响应封装
+
+从简单业务模型处理`-->`复杂业务模型操作
+
+登录、注册 --> 首页数据加载 --> 搜索 --> 购物车 --> 订单结算
+
+### (1) 登录业务
+
+首先创建用户相关业务处理类: [`com.fsh.xiaomi.service.ConsumerService.java`]()
+
+其次创建用户相关业务的访问接口/控制器: [`com.fsh.xiaomi.controller.ConsumerController.java`]()
+
+针对登录业务进行响应数据封装
+
+基于`web`业务的单元测试
 
