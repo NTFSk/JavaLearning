@@ -7,6 +7,7 @@ Mybatis整合Spring-去掉Mapper实现类
 
 去掉之间Mapper实现类的配置，添加Mapper的配置
 
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -50,6 +51,7 @@ Mybatis整合Spring-去掉Mapper实现类
 	<!-- 加载sql映射文件 -->
 	<property name="mapperLocations" value="classpath:mapper/*.xml"/>
 </bean>
+```
 
 ```xml
 <!-- 配置Mapper接口 -->
@@ -61,4 +63,7 @@ Mybatis整合Spring-去掉Mapper实现类
 </bean>
 ```
 
+```
 </beans>
+```
+
