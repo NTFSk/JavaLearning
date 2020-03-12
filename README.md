@@ -37,5 +37,5 @@
 	- [拦截器](./source/SpringMVC/拦截器.md)  
 
 * __SSM项目实战__
-	- [小米商城](./source/SSM项目/客户管理系统/README.md)  
+	- [小米商城](source/SSM项目/小米商城/README.md)  
 	- [客户信息管理系统](./source/SSM项目/客户管理系统/README.md)
