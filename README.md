@@ -19,11 +19,11 @@
 		- [动态SQL](./source/Mybatis/注解-动态SQL.md)
 
 * __Spring__
-	- [IOC/DI](./source/Spring/IOC&DI.md)
-	- [注入对象](./source/Spring/注入对象.md)
-	- [用注解方式实现IOC&DI](./source/Spring/用注解方式实现IOC&DI.md)
-	- [AOP](./source/Spring/AOP.md)
-	- [注解方式AOP](./source/Spring/注解AOP.md)
+	- [IOC/DI](./source/Spring/1. IOC&DI.md)
+	- [注入对象](./source/Spring/2. 注入对象.md)
+	- [用注解方式实现IOC&DI](./source/Spring/3. 用注解方式实现IOC&DI.md)
+	- [AOP](./source/Spring/4. AOP.md)
+	- [注解方式AOP](./source/Spring/5. 注解AOP.md)
 
 
 * __SpringMVC__
