@@ -28,7 +28,7 @@
    2） 启动SpringMVC, 加载 spring-mvc.xml
 
    ```xml
-   <!-- 启动SpringMVC -->
+   	<!-- 启动SpringMVC -->
    	<!-- 通过SpringMVC提供的启动类来启动 -->
    	<servlet>
    		<servlet-name>DispatcherServlet</servlet-name>
@@ -49,10 +49,93 @@
    
 
 3. 配置spring-mvc.xml
+   ---
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:contenxt="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- 扫描Controller所在的包 -->
+	<contenxt:component-scan base-package="cn.sm1234.controller"/>
+
+	<!-- 注解驱动 -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	
+	<!-- 视图解析器:简化在Controller类编写的视图路径 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!-- 前缀 -->
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<!-- 后缀 -->
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+</beans>
+```
 
 4. 编写Controller
+   ---
+
+   ```java
+   package cn.sm1234.controller;
+   
+   import org.springframework.stereotype.Controller;
+   import org.springframework.web.bind.annotation.RequestMapping;
+   
+   @Controller
+   @RequestMapping("/customer")
+   public class CustomerController {
+   
+   	@RequestMapping("/test")
+   	public String test(){
+   		return "test";
+   	}
+   }
+   ```
+
+   
 
 5. 编写页面
+   ---
+
+```jsp
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>My JSP 'test.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+  </head>
+  
+  <body>
+    测试SpringMVC是否可用
+  </body>
+</html>
+
+```
+
+
+
+
 
 
 
