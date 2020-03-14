@@ -79,7 +79,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 _也可以把`@Service`注解理解成给类取了一个别名_
 
-## @Transactional 注解是用来实现事务的
+## `@Transactional `注解是用来实现事务的
 
 `@Transactional`注解管理事务的实现步骤:
 
