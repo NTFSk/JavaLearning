@@ -11,11 +11,11 @@
 
 [5.编写测试类](#5)
 
-<h3 id="1">1.导入包</h3>
+<h3 id="1">1. 导入包</h3>
 
 
 
-<h3 id="2">2.实体类</h3>
+<h3 id="2">2. 实体类</h3>
 
 ```java
 package cn.sm1234.domain;
@@ -62,7 +62,7 @@ public class Customer {
 
 
 
-<h3 id="3">3.Mapper接口</h3>
+<h3 id="3">3. Mapper接口</h3>
 
 ```java
 package cn.sm1234.dao;
@@ -78,7 +78,7 @@ public interface CustomerMapper {
 
 ```
 
-<h3 id="4">4.applicationContext.xml</h3>
+<h3 id="4">4. applicationContext.xml</h3>
 
 在`applicationContext.xml`的同一个包下，创建一个`jdbc.properties`文件，将数据库的信息写进去，在applicationContext.xml中调用
 
@@ -113,19 +113,24 @@ jdbc.password=123123
 	<!-- 读取jdbc.properties -->
 	<context:property-placeholder location="classpath:jdbc.properties"/>
 	
-	<!-- 创建DataSource(连接池对象) -->
+	<!-- 创建数据源DataSource(连接池对象) -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <!--这里的属性就是连接数据库所需要的参数以及连接池的一些基本配置-->
 		<property name="url" value="${jdbc.url}"/>
 		<property name="driverClassName" value="${jdbc.driverClass}"/>
 		<property name="username" value="${jdbc.user}"/>
 		<property name="password" value="${jdbc.password}"/>
+        <property name="maxActive" value="10" />
+		<property name="maxIdle" value="5" />
 	</bean>
 	
 	<!-- 创建SqlSessionFactory对象 -->
+    <!--创建该对象的目的是通过该对象拿到一个sqlSession对象，然后通过sqlSession对象执行数据库操作-->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 关联连接池 -->
 		<property name="dataSource" ref="dataSource"></property>
-		<!-- 加载sql映射文件 -->
+		<!-- 加载mapper接口的sql映射文件 -->
+        <!-- 类路径下的mapper包下的xml文件 -->
 		<property name="mapperLocations" value="classpath:mapper/*.xml"/>
 	</bean>
 	
@@ -147,7 +152,7 @@ jdbc.password=123123
 
   
 
-<h3 id="5">测试类</h3>
+<h3 id="5">5. 测试类</h3>
 
 ```java
 package cn.sm1234.test;
