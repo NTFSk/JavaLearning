@@ -5,6 +5,12 @@ Mybatis整合Spring-去掉Mapper实现类
 该方式只需要删掉Mapper实现类
 然后修改applicationContext.xml文件
 
+[1. 导入包](./要导入的包)
+
+[2. 编写 applicationContext.xml（Spring核心配置）]()
+
+[3. 测试类](https://github.com/NTFSk/JavaLearning/tree/master/source/SSM项目/客户管理系统/学习笔记/Mybatis整合Spring-需要Mapper实现类#4)
+
 去掉之间Mapper实现类的配置，添加Mapper的配置
 
 ```
@@ -25,9 +31,6 @@ Mybatis整合Spring-去掉Mapper实现类
 	
 
 <!-- 这是Spring的核心配置  -->
-
-
-​	
 
 <!-- 读取jdbc.properties -->
 <context:property-placeholder location="classpath:jdbc.properties"/>
