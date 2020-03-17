@@ -160,3 +160,8 @@ public List<Customer> findAl();
 	</select>
 ```
 
+
+
+## 运行流程
+
+![](./客户信息管理系统ssm.png)
