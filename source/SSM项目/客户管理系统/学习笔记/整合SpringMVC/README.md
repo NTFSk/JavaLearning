@@ -1,4 +1,4 @@
-:city_sunrise:在[完成Spring-mybatis整合](../Mybatis整合Spring-Mapper接口扫描)的基础上，再整合上SpringMVC 
+:city_sunrise:在完成[Spring-mybatis整合](../Mybatis整合Spring-Mapper接口扫描)的基础上，再整合上SpringMVC 
 ---
 
 [1.导入整合SpringMVC需要的包](#1)
