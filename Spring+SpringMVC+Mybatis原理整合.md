@@ -137,15 +137,12 @@ __优点：__
 __缺点：__
 
 1. sql工作量很大，尤其是字段多、关联表多时，更是如此。
-
 2. sql依赖于数据库，导致数据库移植性差。
+3. 框架还是比较简陋，功能尚有缺失，虽然简化了数据绑定代码，但是整个底层数据库查询实际还是要自己写的，工作量也比较大，而且不太容易适应快速数据库修改。 
+4. 二级缓存机制不佳
 
-3、框架还是比较简陋，功能尚有缺失，虽然简化了数据绑定代码，但是整个底层数据库查询实际还是要自己写的，工作量也比较大，而且不太容易适应快速数据库修改。 
-
-4、二级缓存机制不佳
-
-__Mybatis详解：https://blog.csdn.net/ShyTan/article/details/81905135__
-__常用配置：https://blog.csdn.net/ShyTan/article/details/82142520__
+__Mybatis详解：https://blog.csdn.net/ShyTan/article/details/81905135__<br>
+__常用配置：https://blog.csdn.net/ShyTan/article/details/82142520__<br>
 ————————————————
 版权声明：本文为CSDN博主「打好基础多看书」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/ShyTan/article/details/81904829
