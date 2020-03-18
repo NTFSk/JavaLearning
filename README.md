@@ -36,10 +36,14 @@
 	- [上传文件](./source/SpringMVC/上传文件.md)
 	- [拦截器](./source/SpringMVC/拦截器.md)  
 
+* __Spring和Mybatis整合__
+
+  - [整合Spring和Mybatis](./source/整合Spring和Mybatis)
+
 * __SSM项目实战__
-	
-	- [客户信息管理系统](source/SSM项目/客户管理系统)
-	
-	- [小米商城](source/SSM项目/小米商城)  
-	
-	  
+
+  - [客户信息管理系统](source/SSM项目/客户管理系统)
+
+  - [小米商城](source/SSM项目/小米商城)  
+
+    
