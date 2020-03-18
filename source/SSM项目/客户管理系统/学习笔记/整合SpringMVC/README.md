@@ -1,60 +1,139 @@
 :city_sunrise:在[完成Spring-mybatis整合](../Mybatis整合Spring-Mapper接口扫描)的基础上，再整合上SpringMVC 
 ---
 
+[1.导入整合SpringMVC需要的包](#1)
+
+[2.配置web.xml（重要）:star:](#2)
+
+[3.配置spring-mvc.xml（SpringMVC的配置文件）](#3)
+
+[4.编写Controller](#4)
+
+[5.编写页面](#5)
 
 
-1. 导入jar包
-   ---
 
-   
 
-2. 配置web.xml
-   ---
 
-   1)  启动Spring， 加载 applicationContext.xml
 
-   - 配置监听器启动Spring
 
-     ```xml
-     <!-- 启动Spring -->
-     	<listener>
-     		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-     	</listener>
-     	<!-- listener默认加载的是WEB-INF目录下的applicationContext.xml文件 -->
-     	<!-- 所以需要修改一下路径 -->
-     	<context-param>
-     		<param-name>contextConfigLocation</param-name>
-     		<param-value>classpth:applicationContext.xml</param-value>
-     	</context-param>
-     ```
+<h3 id="1">1. 导入jar包</h3>
 
-     
 
-   2） 启动SpringMVC, 加载 spring-mvc.xml
 
-   ```xml
-   	<!-- 启动SpringMVC -->
-   	<!-- 通过SpringMVC提供的启动类来启动 -->
-   	<servlet>
-   		<servlet-name>DispatcherServlet</servlet-name>
-   		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-   		<!-- 参数: 读取spring-mvc.xml -->
-   		<init-param>
-   			<param-name>contextConfigLocation</param-name>
-   			<param-value>classpath:spring-mvc.xml</param-value>
-   		</init-param>
-   	</servlet>
-   	
-   	<servlet-mapping>
-   		<servlet-name>DispatcherServlet</servlet-name>
-   		<url-pattern>*.action</url-pattern>
-   	</servlet-mapping>
-   ```
+导入jar包
+---
 
-   
+<h3 id="2">2. 配置web.xml（重要）</h3>
 
-3. 配置spring-mvc.xml
-   ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>01.mybatis</display-name>
+
+	<!-- 配置SpringMVC编码过滤器  -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- Spring MVC servlet -->
+    <!-- 配置前端控制器DispatcherServlet -->
+	<servlet>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- 参数：读取spring-mvc.xml -->
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-mvc.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+        <!-- 以.action结尾的 由 DispacherServlet 进行解析 -->
+        <!-- 如果是/, 则所有的访问都由DispacherServlet进行解析 -->
+		<url-pattern>*.action</url-pattern>
+	</servlet-mapping>
+
+  
+  	<!-- 配置一个监听器用来启动spring -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- 修改路径 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+```
+
+
+
+1)  启动Spring， 加载 applicationContext.xml
+
+- 配置监听器启动Spring
+
+  ```xml
+  <!-- Spring监听器：启动Spring -->
+  <listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <!-- listener默认加载的是WEB-INF目录下的applicationContext.xml文件 -->
+  <!-- 所以需要修改一下路径，改为类路径下的applicationCOntext.xml文件 -->
+  <!--spring和mybatis的配置文件-->
+  <context-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpth:applicationContext.xml</param-value>
+</context-param>
+  ```
+  
+  
+
+2） 启动SpringMVC, 加载 spring-mvc.xml
+
+```xml
+	<!-- 启动SpringMVC -->
+	<!-- 通过SpringMVC提供的启动类来启动 -->
+	<servlet>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- 参数: 读取spring-mvc.xml -->
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-mvc.xml</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<url-pattern>*.action</url-pattern>
+	</servlet-mapping>
+```
+
+
+
+<h3 id="3">3. 配置spring-mvc.xml</h3>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -70,7 +149,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- 扫描Controller所在的包 -->
+	<!-- 自动扫描方式，使SpringMVC认为包下用了@Controller注解的类是控制器 -->
 	<contenxt:component-scan base-package="cn.sm1234.controller"/>
 
 	<!-- 注解驱动 -->
@@ -87,30 +166,30 @@
 </beans>
 ```
 
-4. 编写Controller
-   ---
 
-   ```java
-   package cn.sm1234.controller;
-   
-   import org.springframework.stereotype.Controller;
-   import org.springframework.web.bind.annotation.RequestMapping;
-   
-   @Controller
-   @RequestMapping("/customer")
-   public class CustomerController {
-   
-   	@RequestMapping("/test")
-   	public String test(){
-   		return "test";
-   	}
-   }
-   ```
 
-   
+<h3 id="4">4. 编写Controller</h3>
 
-5. 编写页面
-   ---
+```java
+package cn.sm1234.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/customer")
+public class CustomerController {
+
+	@RequestMapping("/test")
+	public String test(){
+		return "test";
+	}
+}
+```
+
+
+
+<h3 id="5">5. 编写页面</h3>
 
 ```jsp
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
