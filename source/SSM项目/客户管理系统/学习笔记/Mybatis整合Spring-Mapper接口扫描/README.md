@@ -7,7 +7,7 @@
 
 [3.创建Mapper接口](#3)
 
-[4.修改applicationContext.xml](#4)
+[4.配置applicationContext.xml​（重要）:star:](#4)
 
 [5.编写测试类](#5)
 
@@ -78,7 +78,7 @@ public interface CustomerMapper {
 
 ```
 
-<h3 id="4">4. applicationContext.xml</h3>
+<h3 id="4">4. 配置applicationContext.xml（重要）</h3>
 
 在`applicationContext.xml`的同一个包下，创建一个`jdbc.properties`文件，将数据库的信息写进去，在applicationContext.xml中调用
 
@@ -126,6 +126,7 @@ jdbc.password=123123
 	
 	<!-- 创建SqlSessionFactory对象 -->
     <!--创建该对象的目的是通过该对象拿到一个sqlSession对象，然后通过sqlSession对象执行数据库操作-->
+    <!-- 有了该配置，就不需要Mybatis的配置文件了，完美做到Spring和myabtis的整合-->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 关联连接池 -->
 		<property name="dataSource" ref="dataSource"></property>
