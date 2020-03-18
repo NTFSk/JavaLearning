@@ -87,19 +87,19 @@ Spring MVC的优势
 SpringMVC常用注解：
 ---
 
-@Controller
+`@Controller`
 
 　　负责注册一个bean 到spring 上下文中
 
-@RequestMapping
+`@RequestMapping`
 
 　　注解为控制器指定可以处理哪些 URL 请求
 
-@RequestBody
+`@RequestBody`
 
 　　该注解用于读取Request请求的body部分数据，使用系统默认配置的HttpMessageConverter进行解析，然后把相应的数据绑定到要返回的对象上 ,再把HttpMessageConverter返回的对象数据绑定到 controller中方法的参数上
 
-@ResponseBody
+`@ResponseBody`
 
 　　 该注解用于将Controller的方法返回的对象，通过适当的HttpMessageConverter转换为指定格式后，写入到Response对象的body数据区
 
@@ -114,9 +114,9 @@ SpringMVC常用知识：https://blog.csdn.net/ShyTan/article/details/82142393
 
 
 
-MyBatis 是一款优秀的持久层框架，它可以完美的定制化数据库、存放储蓄过程和其他高级的映射。MyBatis 真的很完美的`避免了几乎所有的JDBC的相关的编码以及手动的设置数据参数并得到最终结果的集。`
+​	MyBatis 是一款优秀的持久层框架，它可以完美的定制化数据库、存放储蓄过程和其他高级的映射。MyBatis 真的很完美的`避免了几乎所有的JDBC的相关的编码以及手动的设置数据参数并得到最终结果的集。`
 
- MyBatis应用程序根据XML配置文件创建SqlSessionFactory，SqlSessionFactory在根据配置，配置来源于两个地方，一处是配置文件，一处是Java代码的注解，获取一个SqlSession。SqlSession包含了执行sql所需要的所有方法，可以通过SqlSession实例直接运行映射的sql语句，完成对数据的增删改查和事务提交等，用完之后关闭SqlSession。
+​	MyBatis应用程序根据XML配置文件创建SqlSessionFactory，SqlSessionFactory在根据配置，配置来源于两个地方，一处是配置文件，一处是Java代码的注解，获取一个SqlSession。SqlSession包含了执行sql所需要的所有方法，可以通过SqlSession实例直接运行映射的sql语句，完成对数据的增删改查和事务提交等，用完之后关闭SqlSession。
 
 __优点：__
 
