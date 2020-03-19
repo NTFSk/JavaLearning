@@ -40,6 +40,10 @@
 
   - [整合Spring和Mybatis](./source/整合Spring和Mybatis)
 
+* __SSM框架整合__
+
+  - [SSM框架整合步骤](./source/SSM框架整合)
+
 * __SSM项目实战__
 
   - [客户信息管理系统](source/SSM项目/客户管理系统)
