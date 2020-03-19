@@ -3,14 +3,6 @@
 
 整合spring与myabtis重点在于Spring的核心配置文件：applicationContext.xml
 
-在这个配置文件中我们大体要完成以下三个配置：
-
-- 数据源配置
-- SqlSessionFactoryBean配置
-- MapperScannerConfigurer配置
-
-
-
 [1. pojo](#1)
 
 [2. Mapper接口](#2)
@@ -113,7 +105,15 @@ public interface CategoryMapper {
 
 
 
-<h3 id="4">4. applicationContext.xml</h3>
+<h3 id="4">4. applicationContext.xml（重要）</h3>
+
+在这个配置文件中我们大体要完成以下三个配置：
+
+- 数据源配置
+- SqlSessionFactoryBean配置
+- MapperScannerConfigurer配置
+
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

@@ -4,7 +4,8 @@ web.xml加载过程（步骤）
 ​	当启动一个WEB项目的时候，容器（JBoss、Tomcat等）会先读取项目web.xml文件里的配置，当这一步骤没有出错并且完成之后，项目才能正确地被启动起来。
 
 1. 启动WEB项目的时候，容器首先会去web.xml读取两个节点：`<listener> </listener>` 和 `<context-param> </context-param>`。
-2. 紧接着，容器创建一个`ServletContext`（servlet上下文）, 这个WEB项目内部的所有servlet都共享这个对象。
+   ![](先读取两个节点.png)
+2. 紧接着，容器创建一个`ServletContext`（application）, 这个WEB项目内部的所有servlet都共享这个上下文。
 3. 容器以`<context-param> </context-param>`的 name 作为键， value 作为值，将其转化为键值对，存入`SerlectContext`（servlet上下文）。
 4. 容器创建`<listener> </listener>` 中的类实例， 根据配置的class类路径`<listener-class>`来创建监听，
 5. 接着，容器会读取`<filter> </filter>`，根据指定的类路径来实例化过滤器。
