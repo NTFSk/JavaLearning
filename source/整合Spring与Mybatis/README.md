@@ -1,7 +1,7 @@
 整合spring与mybatis
 ---
 
-整合spring与myabtis重点在于Spring的核心配置文件：applicationContext.xml
+整合spring与myabtis重点在于Spring的核心配置文件：__applicationContext.xml__
 
 [1. pojo](#1)
 

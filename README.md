@@ -38,7 +38,7 @@
 
 * __Spring和Mybatis整合__
 
-  - [整合Spring和Mybatis](./source/整合Spring和Mybatis)
+  - [整合Spring和Mybatis](./source/整合Spring与Mybatis)
 
 * __SSM框架整合__
 
