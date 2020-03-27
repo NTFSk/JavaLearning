@@ -3,6 +3,9 @@
 <div align="center"><img width="600" height="340" src="https://github.com/NTFSk/JavaLearning/blob/master/pictures/readme_pictrues/wallhaven-13mk9v.jpg"/></div>
 <br>
 
+* __JSP__
+  - [基础语法](./source/JSP/1.基础语法.md)
+
 
 * __Mybatis__
 	- [简单示例](https://github.com/NTFSk/JavaLearning/blob/master/source/Mybatis/1.%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%A4%BA%E4%BE%8B.md)
