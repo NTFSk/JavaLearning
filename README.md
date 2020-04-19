@@ -54,6 +54,9 @@
   - [小米商城](source/SSM项目/小米商城)  
 
     * [Mybatis与Spring整合](./source/SSM项目/客户管理系统/学习笔记/Mybatis整合Spring-加入Spring事务管理)
+
+      > [mybatis与Spring整合简单示例及原理](./source/整合Spring与Mybatis)
+
     * [整合SpringMVC](./source/SSM项目/客户管理系统/学习笔记/整合SpringMVC)
-    
+
     
