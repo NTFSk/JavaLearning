@@ -153,6 +153,10 @@ public class MybatisSpringTest {
 
 完整的`applicationContext.xml`
 
+- 数据源配置（链接数据库）
+- SqlSessionFactoryBean配置（关联连接池，加载sql映射文件）
+- MapperScannerConfigurer配置（扫描mapper接口所在的包路径）
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
