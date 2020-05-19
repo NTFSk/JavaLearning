@@ -1,6 +1,8 @@
 
 
-## 约束
+
+
+<h2 id="1">约束</h3>
 
 #### 非空约束 ： not null
 
@@ -52,7 +54,7 @@ alter table 表名 modify 列名 字段类型 primary key;
 
 ```mysql
 create table 表名(
-	列名 字段类型 primary key auto_increment,
+	列名 字段类型 primary key auto_increment
 );
 ```
 
@@ -67,6 +69,34 @@ alter table 表名 modify 列名 字段类型;
 ```mysql
 alter table 表名 modify 列名 字段类型 auto_increment;
 ```
+
+
+
+#### 外键约束 ： foreign key
+
+建表时添加外键
+
+```mysql
+create table 表名(
+	...,
+    外键列,
+    constraint 外键名称 foreign key (外键列) references 主表名称(主表列名称)
+);
+```
+
+删除外键
+
+```mysql
+alter table 表名 drop foreign key 外键名称;
+```
+
+建表后添加外键
+
+```mysql
+alter table 表名 add constraint 外键名称 foreign key (外键列) references 主表名称(主表列名称);
+```
+
+
 
 
 
