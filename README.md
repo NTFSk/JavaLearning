@@ -60,5 +60,10 @@
     * [整合SpringMVC](./source/SSM项目/客户管理系统/学习笔记/整合SpringMVC)
 
     * [SSM框架整合](./source/SSM框架整合)
-    
-    
+
+
+  * [学生信息管理系统](source/SSM项目/学生信息管理系统)
+
+  
+
+  
