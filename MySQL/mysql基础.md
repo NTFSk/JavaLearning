@@ -6,6 +6,8 @@
 
 [事务](#4)
 
+[DCL](#5)
+
 
 
 
@@ -287,9 +289,9 @@ select * from 表名 where 字段名 in (子查询语句);
 * 隔离级别：
   * read uncommitted : 
     * 产生的问题： 脏读、不可重复读、幻读
-  * read committed: 
+  * read committed :  (Oracle默认)
     * 产生的问题：不可重复读，幻读
-  * repeatable read:
+  * repeatable read : (Mysql默认)
     * 产生的问题：幻读
   * serializable: 串行话
     * 可以解决所有问题
@@ -305,3 +307,96 @@ select @@tx_isolation;
 set global transaction isolation level 级别字符串;
 ```
 
+
+
+
+<h2 id="5">DCL</h3>
+
+**SQL分类：**
+
+* DDL : 操作数据库和表
+* DML：增删改表中数据
+* DQL：查询表中数据
+* DCL：管理用户，对用户授权
+
+DBA：数据管理员
+
+**DCL：**
+
+* **管理用户**
+
+  * 添加用户
+
+    ```mysql
+    create user '用户名'@'主机名' identified by '密码';
+    
+    create user 'zhangsan'@'%' identified by '123';
+    -- 通配符'%'表示能在任何一台主机访问当前数据库
+    ```
+
+  * 删除用户
+
+    ```mysql
+    drop user '用户名'@'主机名';
+    ```
+
+  * 修改用户密码
+
+    ```mysql
+    -- 方式1
+    update user set password = password('新密码') where user = '用户名';
+    -- 方式2
+    set password for '用户名'@'主机名' = password('新密码');
+    ```
+
+  * 查询用户
+
+    ```mysql
+    select * from USER;
+    ```
+
+***mysql忘记了root的密码怎么办？***
+
+1. 停止mysql服务
+2. 使用无验证方式启动mysql服务：mysqld --skip-grant-tables
+3. 打开新的cmd窗口，输入mysql命令，回车，登录
+4. use mysql;
+5. update user set password = password('新密码') where user = 'root';
+6. 关闭cmd窗口
+7. 打开任务管理器,手动结束mysqld.exe的进程
+8. 启动mysql服务
+9. 使用新密码登录
+
+* **用户授权**
+
+  * 查询权限
+
+    ```mysql
+    show grants for '用户名'@'主机名';
+    ```
+
+    
+
+  * 授予权限
+
+    ```mysql
+    grant 权限 on 数据库.表名 to '用户名'@'主机名';
+    -- 示例
+    grant select,delete ssm.student to 'zhangsan'@'localhost';
+    -- 授予所有权限
+    grant all ssm.student to 'zhangsan'@'localhost';
+    -- 授予用户zhangsan对于数据库ssm的所有表的权限
+    grant all ssm.* to 'zhangsan'@'localhost';
+    -- 授予用户zhangsan对于所有数据库的所有表的权限
+    grant all *.* to 'zhangsan'@'localhost';
+    ```
+
+    
+
+  * 删除权限
+
+    ```mysql
+    remove 权限 on 数据库.表名 from '用户名'@'主机名';
+    ```
+
+    
