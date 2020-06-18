@@ -6,3 +6,5 @@ Spring
 [3. 用注解方式实现IOC&DI](./3.用注解方式实现IOC&DI.md)
 [4. AOP](./4.AOP.md)
 [5. 注解方式AOP](./5.注解AOP.md)
+
+![img](./spring结构图.jpg)
