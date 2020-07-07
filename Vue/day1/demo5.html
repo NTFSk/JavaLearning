@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 数据双向绑定演示 v-model -->
+    <div id="app">
+        输入的文本: <input type="text" v-model="message"/> {{message}}
+        <br/>
+        <select v-model="selected">
+            <option value="" disabled>--请选择--</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        选中的值<a>{{selected}}</a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: "",
+                selected: ""
+            }
+           
+        });
+
+    </script>
+</body>
+</html>

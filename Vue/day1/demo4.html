@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 方法绑定 v-on -->
+    <div id="app">
+        <button v-on:click="sayHi">点击我</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {},
+            methods:{ // 方法定义在 Vue 的 methods 对象中
+                // 方法名: function(){}
+                sayHi: function(){
+                    // 'this'在方法里指向当前的vue实例
+                    alert(this.message);
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

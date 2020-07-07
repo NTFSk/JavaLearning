@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Vue组件 -->
+    <div id="app">
+        <!-- v-bind:text="item"，将遍历的item项绑定到组件中props定义的名为item的属性上；
+            = 左边的text是props定义的属性名，= 右边的是item in intems中遍历的item的值-->
+        <component1 v-for="item in items" v-bind:text="item"></component1> 
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+
+        // 定义一个Vue组件 component
+        Vue.component("component1", {
+            // 参数传递到组件，使用props属性接收，text相当于形参，而item是实参
+            props: ['text'],
+            template: '<li>{{text}}</li>'
+        });
+
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                items: ["java","linux","web","sql"]
+            }
+           
+        });
+
+    </script>
+</body>
+</html>

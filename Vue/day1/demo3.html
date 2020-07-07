@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- v-for 循环 -->
+    <div id="app">
+        <li v-for="item in items">
+            {{item.message}}
+        </li>
+    </div>
+
+    <div id="app2">
+        <li v-for="(item, index) in items2">
+            {{item.message}}--- {{index}}
+        </li>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                items: [
+                    {message: 'text111'},
+                    {message: 'text222'},
+                    {message: 'text333'},
+                    {message: 'text444'},
+                    {message: 'text555'}
+
+                ]
+            }
+        });
+
+        var vm2 = new Vue({
+            el: "#app2",
+            data: {
+                items2: [
+                    {message: 'text111111'},
+                    {message: 'text222222'},
+                    {message: 'text333333'},
+                    {message: 'text444444'},
+                    {message: 'text555555'}
+
+                ]
+            }
+        });
+
+    </script>
+</body>
+</html>

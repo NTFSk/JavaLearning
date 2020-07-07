@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- axios -->
+    <div id="app">
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+
+        var vm = new Vue({
+            el: "#app",
+            mounted(){ //钩子函数 链式编程
+                axios.get('../data.json').then(response=>(console.log(response.data)));
+            }
+           
+        });
+
+    </script>
+</body>
+</html>

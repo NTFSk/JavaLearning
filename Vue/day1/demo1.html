@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--view层-模板-->
+    <div id="app">
+        <!--3)使用数据-->
+        <span v-bind:title="message">
+            鼠标悬停几秒查看此处动态绑定的提示信息！    
+        </span>
+    </div>
+
+    <!-- 1. 导入Vue.js-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            // 1)绑定标签-js对象
+            el : "#app",
+            // 2)放数据-键值对形式
+            data:{
+                message: "hello,vue!"
+            }
+        });
+
+
+    </script>
+</body>
+</html>
