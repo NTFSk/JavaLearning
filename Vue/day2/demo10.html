@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+    对几个比较容易混淆的属性进行说明：
+    1.组件的名字，对应的是前端标签的名字，比如"todo"
+    2.组件中定义的slot的name属性，对应的是前端标签中的slot属性
+    3.前端使用v-bind绑定的属性，对应的是vue实例中的属性，而不是组件中的属性，比如:title="title"；组件中的模板中绑定的方法和属性都是组件中的方法和属性，不是vue实例中的，
+        比如todo-items组件中的button中使用@click绑定了remove方法，这个remove方法就是这个组件中的方法
+    4.使用自定义事件分发，在前端把自定义方法名和vue实例中的方法绑定起来，然后在组件中接收这个自定义方法名，从而实现在组件中操纵vue实例的数据的目的
+-->
+<body>
+    <div id="app">
+        <todo>
+            <!-- :title绑定了Vue实例中的title参数的值 -->
+            <todo-title slot="todo-title-slot" :title="title">2222</todo-title>
+            <!-- :item绑定的是v-for循环里的item -->
+            <todo-items slot="todo-items-slot" 
+                    v-for="(item,index) in todoItems" 
+                    :item="item" 
+                    :index="index"
+                    @diyremove="removeItems(index)">333</todo-items>
+        </todo>
+    </div>
+    <!-- 自定义事件内容分发 --> 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    // 定义一个叫 todo的组件
+    // 它的模板是div标签中包含一个name=todo-title-label的插槽，这里的name=的值，要和前端的slot=的值相等
+    Vue.component("todo",{
+        template: '<div>\
+                        <slot name="todo-title-slot"></slot>\
+                        <ul>\
+                            <slot name="todo-items-slot"></slot>\
+                        </ul>\
+                    </div>'
+    }); 
+
+    // 定义一个叫todo-title的组件,接受前端视图层传来的 title形参
+    // 组件名和前端的标签名要一样
+    Vue.component("todo-title",{
+        props: ['title'],
+        template: '<div>{{title}}</div>'
+    });
+
+    Vue.component("todo-items",{
+        props: ['item','index'],
+        // 只能绑定当前组件定义的方法
+        template: '<li>{{index}}-----{{item}}<button @click="remove">删除</button></li>',
+        // 
+        methods: {
+            remove: function(index){
+                // this.$emit 自定义事件分发
+                this.$emit('diyremove', index);
+            }
+        }
+    });
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            title: "这是vm的title属性的值",
+            todoItems: ['java','php','C++'],
+            
+        },
+        methods:{
+            removeItems:function(index){
+                this.todoItems.splice(index, 1);//一次删除一个元素
+            }
+        }
+    });
+</script>
+    
+</body>
+</html>
