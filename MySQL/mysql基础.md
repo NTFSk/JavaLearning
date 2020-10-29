@@ -1,18 +1,10 @@
-[约束](#1)
-
-[数据库设计](#2)
-
-[多表查询](#3)
-
-[事务](#4)
-
-[DCL](#5)
+[toc]
 
 
 
 
 
-<h2 id="1">约束</h3>
+### 约束
 
 #### 非空约束 ： not null
 
@@ -120,7 +112,8 @@ alter table 表名 add constraint 外键名称 foreign key (外键列) reference
 
 
 
-<h2 id="2">数据库设计</h3>
+### 数据库设计
+
 
 #### 多表间的关系
 
@@ -198,7 +191,8 @@ alter table 表名 add constraint 外键名称 foreign key (外键列) reference
 
 
 
-<h2 id="3">多表查询</h3>
+### 多表查询
+
 
 笛卡尔积： 两个集合的所有组成情况
 
@@ -264,7 +258,8 @@ select * from 表名 where 字段名 in (子查询语句);
 
 
 
-<h2 id="4">事务</h3>
+### 事务
+
 
 #### 四个特征
 
@@ -309,8 +304,8 @@ set global transaction isolation level 级别字符串;
 
 
 
+### DCL
 
-<h2 id="5">DCL</h3>
 
 **SQL分类：**
 
