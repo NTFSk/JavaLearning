@@ -1,6 +1,27 @@
-[toc]
 
 
+- [常见的自动化测试流程](#----------)
+- [selenium基础知识](#selenium----)
+  * [常见元素处理](#------)
+- [文件上传](#----)
+  * [input标签](#input--)
+  * [autoit](#autoit)
+  * [<font color='red'>利用Robot类处理文件上传</font>](#-font-color--red----robot---------font-)
+- [Select下拉框选择](#select-----)
+  * [方式一: 点击下拉框, 再点击下拉框中的元素,模拟用户的操作](#------------------------------)
+  * [方式二:selenium之 下拉选择框Select](#----selenium-------select)
+- [Selenium鼠标操作](#selenium----)
+  * [常用鼠标操作](#------)
+    + [鼠标左击](#----)
+    + [鼠标右击](#----)
+    + [鼠标双击](#----)
+    + [鼠标悬停](#----)
+- [窗体跳转](#----)
+  * [iframe](#iframe)
+  * [弹窗](#--)
+  * [浏览器窗口](#-----)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 # 常见的自动化测试流程
 
